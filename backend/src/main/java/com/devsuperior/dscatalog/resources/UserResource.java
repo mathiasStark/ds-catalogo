@@ -3,8 +3,11 @@ package com.devsuperior.dscatalog.resources;
 import java.net.URI;
 //import java.util.List;
 
+<<<<<<< HEAD
 import javax.validation.Valid;
 
+=======
+>>>>>>> 37dc948 (User CRUD)
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -57,7 +60,11 @@ public class UserResource {
 	}
 	
 	@PostMapping
+<<<<<<< HEAD
 	public ResponseEntity<UserDTO> insert(@Valid @RequestBody UserInsertDTO dto){
+=======
+	public ResponseEntity<UserDTO> insert(@RequestBody UserInsertDTO dto){
+>>>>>>> 37dc948 (User CRUD)
 		UserDTO newDTO = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(newDTO.getId()).toUri();
@@ -66,7 +73,11 @@ public class UserResource {
 	}
 	
 	@PutMapping(value = "/{id}")
+<<<<<<< HEAD
 	public ResponseEntity<UserDTO> update(@Valid @PathVariable Long id,@RequestBody UserDTO dto){
+=======
+	public ResponseEntity<UserDTO> update(@PathVariable Long id,@RequestBody UserDTO dto){
+>>>>>>> 37dc948 (User CRUD)
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}
