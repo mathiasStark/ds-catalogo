@@ -4,10 +4,15 @@ import java.net.URI;
 //import java.util.List;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.validation.Valid;
 
 =======
 >>>>>>> 37dc948 (User CRUD)
+=======
+import javax.validation.Valid;
+
+>>>>>>> 3270e3f (Basic Beans Validation)
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -61,10 +66,14 @@ public class UserResource {
 	
 	@PostMapping
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public ResponseEntity<UserDTO> insert(@Valid @RequestBody UserInsertDTO dto){
 =======
 	public ResponseEntity<UserDTO> insert(@RequestBody UserInsertDTO dto){
 >>>>>>> 37dc948 (User CRUD)
+=======
+	public ResponseEntity<UserDTO> insert(@Valid @RequestBody UserInsertDTO dto){
+>>>>>>> 3270e3f (Basic Beans Validation)
 		UserDTO newDTO = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(newDTO.getId()).toUri();
@@ -74,10 +83,14 @@ public class UserResource {
 	
 	@PutMapping(value = "/{id}")
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public ResponseEntity<UserDTO> update(@Valid @PathVariable Long id,@RequestBody UserDTO dto){
 =======
 	public ResponseEntity<UserDTO> update(@PathVariable Long id,@RequestBody UserDTO dto){
 >>>>>>> 37dc948 (User CRUD)
+=======
+	public ResponseEntity<UserDTO> update(@Valid @PathVariable Long id,@RequestBody UserDTO dto){
+>>>>>>> 3270e3f (Basic Beans Validation)
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}

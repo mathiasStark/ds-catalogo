@@ -5,11 +5,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 =======
 >>>>>>> 37dc948 (User CRUD)
+=======
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
+>>>>>>> 3270e3f (Basic Beans Validation)
 import com.devsuperior.dscatalog.entities.User;
 
 public class UserDTO implements Serializable {
@@ -19,16 +25,22 @@ public class UserDTO implements Serializable {
 	
 	private Long id;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3270e3f (Basic Beans Validation)
 	
 	@NotBlank(message = "Campo obrigatório")
 	private String firstName;
 	private String lastName;
 	
 	@Email(message= "Preço deve ser um valor válido")
+<<<<<<< HEAD
 =======
 	private String firstName;
 	private String lastName;
 >>>>>>> 37dc948 (User CRUD)
+=======
+>>>>>>> 3270e3f (Basic Beans Validation)
 	private String email;
 
 	Set<RoleDTO> roles = new HashSet<>();
